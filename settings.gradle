@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "POC"
+rootProject.name = "Swiko"
 include ':app'

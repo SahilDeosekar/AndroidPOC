@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notification_navigation"
+    app:startDestination="@id/notificationsFragment">
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="net.srijan.swiko.ui.fragments.NotificationsFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="myapp://notification-fragment" />
+    </fragment>
+</navigation>

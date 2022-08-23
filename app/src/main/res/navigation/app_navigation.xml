@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_navigation"
+    app:startDestination="@+id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="net.srijan.swiko.ui.SplashFragment"
+        android:label="Splash"
+        tools:layout="@layout/fragment_splash">
+    </fragment>
+
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="net.srijan.swiko.ui.user.auth.SignInFragment"
+        android:label="LogIn"
+        tools:layout="@layout/fragment_sign_in">
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="net.srijan.swiko.ui.user.auth.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up">
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="net.srijan.swiko.ui.user.forgotpassword.ForgetPasswordFragment"
+        android:label="Forgot Password"
+        tools:layout="@layout/fragment_forget_password">
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="net.srijan.swiko.ui.user.forgotpassword.ResetPasswordFragment"
+        android:label="Reset Password"
+        tools:layout="@layout/fragment_reset_password">
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="net.srijan.swiko.ui.MainFragment"
+        android:label="Swiko"
+        tools:layout="@layout/fragment_main">
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="net.srijan.swiko.ui.user.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+    </fragment>
+
+</navigation>

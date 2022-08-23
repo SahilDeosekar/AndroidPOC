@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.user.profile.ProfileFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dp_76">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profile_swiko_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="@dimen/dp_50"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_user"
+                app:layout_constraintBottom_toTopOf="@id/email_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/roundedImageView" />
+
+            <ImageView
+                android:id="@+id/profile_edit_iv"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/img_edit"
+                app:layout_constraintBottom_toBottomOf="@id/profile_swiko_iv"
+                app:layout_constraintEnd_toEndOf="@id/profile_swiko_iv"
+                app:layout_constraintHorizontal_bias="0.95"
+                app:layout_constraintStart_toStartOf="@id/profile_swiko_iv"
+                app:layout_constraintTop_toTopOf="@id/profile_swiko_iv"
+                app:layout_constraintVertical_bias="1" />
+
+            <TextView
+                android:id="@+id/email_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:padding="@dimen/dp_15"
+                android:text="testuser@gmail.com"
+                android:textColor="#586075"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_swiko_iv" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_first_name_til"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxBackgroundMode="filled"
+                app:layout_constraintBottom_toTopOf="@id/profile_last_name_til"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/email_tv"
+                app:layout_constraintWidth_percent="0.8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_first_name_tiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/first_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingTop="@dimen/dp_30" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_last_name_til"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxBackgroundMode="filled"
+                app:layout_constraintBottom_toTopOf="@id/profile_dob_til"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_first_name_til"
+                app:layout_constraintWidth_percent="0.8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_last_name_tiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/last_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingTop="@dimen/dp_30" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/profile_dob_til"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                app:boxBackgroundColor="@android:color/transparent"
+                app:boxBackgroundMode="filled"
+                app:layout_constraintBottom_toTopOf="@id/profile_gender_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_last_name_til"
+                app:layout_constraintWidth_percent="0.8">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/profile_dob_tiet"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:hint="@string/date_of_birth"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingTop="@dimen/dp_30" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/profile_gender_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="Gender"
+                android:textSize="@dimen/sp_16"
+                app:layout_constraintBottom_toTopOf="@id/profile_gender_radio_group"
+                app:layout_constraintEnd_toEndOf="@id/profile_dob_til"
+                app:layout_constraintStart_toStartOf="@id/profile_dob_til"
+                app:layout_constraintTop_toBottomOf="@id/profile_dob_til" />
+
+            <RadioGroup
+                android:id="@+id/profile_gender_radio_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="@id/profile_dob_til"
+                app:layout_constraintStart_toStartOf="@id/profile_dob_til"
+                app:layout_constraintTop_toBottomOf="@id/profile_gender_label">
+
+                <RadioButton
+                    android:id="@+id/profile_male_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Male" />
+
+                <RadioButton
+                    android:id="@+id/profile_female_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Female" />
+
+                <RadioButton
+                    android:id="@+id/profile_non_binary_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Non-binary" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/profile_gender_error_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/please_select_a_gender"
+                android:textColor="@color/design_default_color_error"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@id/profile_dob_til"
+                app:layout_constraintStart_toStartOf="@id/profile_dob_til"
+                app:layout_constraintTop_toBottomOf="@id/profile_gender_radio_group" />
+
+            <Button
+                android:id="@+id/btn_edit_profile"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/dp_20"
+                android:text="@string/update"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_gender_radio_group"
+                app:layout_constraintWidth_percent="0.8" />
+
+            <ProgressBar
+                android:id="@+id/profile_progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/btn_edit_profile"
+                app:layout_constraintEnd_toEndOf="@id/btn_edit_profile"
+                app:layout_constraintStart_toStartOf="@id/btn_edit_profile"
+                app:layout_constraintTop_toTopOf="@id/btn_edit_profile" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+

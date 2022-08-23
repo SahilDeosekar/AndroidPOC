@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "178225385833",
+    "firebase_url": "https://swiko-gql-default-rtdb.firebaseio.com",
+    "project_id": "swiko-gql",
+    "storage_bucket": "swiko-gql.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178225385833:android:193ad99e6e618e53df2df8",
+        "android_client_info": {
+          "package_name": "net.srijan.swiko"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178225385833-0ucij1d16147prad78v9bu4vba0si6fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI0K0xftfqV3KbJ2wIeQvEZy-nnEVaGHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178225385833-0ucij1d16147prad78v9bu4vba0si6fg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
